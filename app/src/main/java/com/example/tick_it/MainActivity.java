@@ -29,63 +29,71 @@ Fragment selectedFragment = null;
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle(getResources().getString(R.string.app_name));
-        TabLayout tabLayout = findViewById(R.id.tablayout);
-        TabItem tabMovies = findViewById(R.id.TabMovies);
-        TabItem tabEvents = findViewById(R.id.TabEvents);
-        TabItem tabSports = findViewById(R.id.TabSports);
-        TabItem tabPopularEvents = findViewById(R.id.TabPopularevents);
-        ViewPager viewPager = findViewById(R.id.viewPager);
 
-        PagerAdapter pageAdapter = new PagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
-        viewPager.setAdapter(pageAdapter);
+//
+//
+//        TabLayout tabLayout = findViewById(R.id.tablayout);
+//        TabItem tabMovies = findViewById(R.id.TabMovies);
+//        TabItem tabEvents = findViewById(R.id.TabEvents);
+//        TabItem tabSports = findViewById(R.id.TabSports);
+//        TabItem tabPopularEvents = findViewById(R.id.TabPopularevents);
+//
 
 
-        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
 
-        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                viewPager.setCurrentItem(tab.getPosition());
-                if (tab.getPosition() == 1) {
-                    toolbar.setBackgroundColor(ContextCompat.getColor(MainActivity.this,
-                            R.color.colorAccent));
-                    tabLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this,
-                            R.color.colorAccent));
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                        getWindow().setStatusBarColor(ContextCompat.getColor(MainActivity.this,
-                                R.color.colorAccent));
-                    }
-                } else if (tab.getPosition() == 2) {
-                    toolbar.setBackgroundColor(ContextCompat.getColor(MainActivity.this,
-                            android.R.color.darker_gray));
-                    tabLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this,
-                            android.R.color.darker_gray));
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                        getWindow().setStatusBarColor(ContextCompat.getColor(MainActivity.this,
-                                android.R.color.darker_gray));
-                    }
-                } else {
-                    toolbar.setBackgroundColor(ContextCompat.getColor(MainActivity.this,
-                            R.color.colorPrimary));
-                    tabLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this,
-                            R.color.colorPrimary));
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                        getWindow().setStatusBarColor(ContextCompat.getColor(MainActivity.this,
-                                R.color.colorPrimaryDark));
-                    }
-                }
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
-        });
+//
+//        ViewPager viewPager = findViewById(R.id.viewPager);
+//
+//        PagerAdapter pageAdapter = new PagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
+//        viewPager.setAdapter(pageAdapter);
+//
+//
+//        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+//
+//        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+//            @Override
+//            public void onTabSelected(TabLayout.Tab tab) {
+//                viewPager.setCurrentItem(tab.getPosition());
+//                if (tab.getPosition() == 1) {
+//                    toolbar.setBackgroundColor(ContextCompat.getColor(MainActivity.this,
+//                            R.color.colorAccent));
+//                    tabLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this,
+//                            R.color.colorAccent));
+//                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+//                        getWindow().setStatusBarColor(ContextCompat.getColor(MainActivity.this,
+//                                R.color.colorAccent));
+//                    }
+//                } else if (tab.getPosition() == 2) {
+//                    toolbar.setBackgroundColor(ContextCompat.getColor(MainActivity.this,
+//                            android.R.color.darker_gray));
+//                    tabLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this,
+//                            android.R.color.darker_gray));
+//                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+//                        getWindow().setStatusBarColor(ContextCompat.getColor(MainActivity.this,
+//                                android.R.color.darker_gray));
+//                    }
+//                } else {
+//                    toolbar.setBackgroundColor(ContextCompat.getColor(MainActivity.this,
+//                            R.color.colorPrimary));
+//                    tabLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this,
+//                            R.color.colorPrimary));
+//                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+//                        getWindow().setStatusBarColor(ContextCompat.getColor(MainActivity.this,
+//                                R.color.colorPrimaryDark));
+//                    }
+//                }
+//            }
+//
+//            @Override
+//            public void onTabUnselected(TabLayout.Tab tab) {
+//
+//            }
+//
+//            @Override
+//            public void onTabReselected(TabLayout.Tab tab) {
+//
+//            }
+//        });
 
 
 
@@ -95,22 +103,24 @@ Fragment selectedFragment = null;
 
         if (savedInstanceState == null) {
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                new Movies_Fragment()).commit();
+                new Home_Fragment()).commit();
     }
+
+
 }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override
 
-                
+
 
                 public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
 
                     switch (item.getItemId()) {
                         case R.id.nav_home:
-                            selectedFragment = new Movies_Fragment();
+                            selectedFragment = new Home_Fragment();
                             break;
                         case R.id.nav_favorites:
                             selectedFragment = new Favourites_Fragment();

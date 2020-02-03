@@ -1,8 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
 
+
     android:layout_height="match_parent">
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="585dp"
+        android:layout_marginTop="80dp" >
+
+
+
+        <com.google.android.material.tabs.TabLayout
+
+            android:id="@+id/tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:layout_marginTop="50dp"
+            android:background="@color/DarkBlue"
+            app:tabSelectedTextColor="@color/colorPrimary"
+            app:tabTextColor="@color/colorPrimary">
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/TabMovies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:text="Movies">
+
+            </com.google.android.material.tabs.TabItem>
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/TabEvents"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Events" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/TabSports"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sports" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/TabPopularevents"
+
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Popular Events" />
+
+        </com.google.android.material.tabs.TabLayout>
+    </androidx.viewpager.widget.ViewPager>
+
+
+
 
 
     <TextView

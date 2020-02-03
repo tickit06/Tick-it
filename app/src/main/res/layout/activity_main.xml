@@ -21,56 +21,55 @@
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/bottom_navigation">
-    </FrameLayout>
+        android:layout_above="@id/bottom_navigation"></FrameLayout>
 
-    <com.google.android.material.tabs.TabLayout
+<!--    <com.google.android.material.tabs.TabLayout-->
 
-        android:id="@+id/tablayout"
-        android:layout_width="match_parent"
-        android:layout_height="28dp"
-        android:layout_marginTop="50dp"
-        android:background="@color/colorPrimary"
-        app:tabSelectedTextColor="@android:color/white"
-        app:tabTextColor="@android:color/white">
+<!--        android:id="@+id/tablayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="28dp"-->
+<!--        android:layout_marginTop="50dp"-->
+<!--        android:background="@color/colorPrimary"-->
+<!--        app:tabSelectedTextColor="@android:color/white"-->
+<!--        app:tabTextColor="@android:color/white">-->
 
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/TabMovies"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:text="Movies">
+<!--        <com.google.android.material.tabs.TabItem-->
+<!--            android:id="@+id/TabMovies"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@color/white"-->
+<!--            android:text="Movies">-->
 
-        </com.google.android.material.tabs.TabItem>
+<!--        </com.google.android.material.tabs.TabItem>-->
 
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/TabEvents"
+<!--        <com.google.android.material.tabs.TabItem-->
+<!--            android:id="@+id/TabEvents"-->
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Events" />
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Events" />-->
 
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/TabSports"
+<!--        <com.google.android.material.tabs.TabItem-->
+<!--            android:id="@+id/TabSports"-->
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Sports" />
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Sports" />-->
 
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/TabPopularevents"
+<!--        <com.google.android.material.tabs.TabItem-->
+<!--            android:id="@+id/TabPopularevents"-->
 
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="Popular Events" />
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Popular Events" />-->
 
-    </com.google.android.material.tabs.TabLayout>
+<!--    </com.google.android.material.tabs.TabLayout>-->
 
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewPager"
-        android:layout_width="match_parent"
-        android:layout_height="585dp"
-        android:layout_marginTop="80dp" />
+<!--    <androidx.viewpager.widget.ViewPager-->
+<!--        android:id="@+id/viewPager"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="585dp"-->
+<!--        android:layout_marginTop="80dp" />-->
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
